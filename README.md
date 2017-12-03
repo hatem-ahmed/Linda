@@ -1,6 +1,24 @@
 # Linda
 Shared Memory Implementation over a Distributed System
 
+Project Objective
+=================
+        - Project is implemented in C
+        - LINDA Implementation supports High Availability (Primary/Standby)
+        - Implement LINDA Shared Memory over Distributed System #N Nodes
+        - User will have the below interface to Read/Write TUPLEs in memory
+        - Distributed System nodes are based on Linux CENTOS7
+        - SOCKET Programming is Used betwwn nodes for communication
+        - Process forking is used to have Client-Server communication
+        - Port Numbers Used are random and outside the assigned range of 0-1023
+        - MD5 HASH Algorithm is used for node selection
+        - HASH table is generated according to number of nodes and updated if a node is added or removed
+        - Database File is created to keep track of Primary/Standby Nodes
+        - Temporary Files are creeated to store user tuples
+
+
+Below Diagram is High Level Sequence of Implementation
+-----------------------------------------------------
 1-Pre-Requisite Configuration from user
     - User Defines the needed nodes in LINDA System
    i.e.  add (host_1, 129.210.16.85, xxxxx)(host_2, 129.210.16.88, xxxxx)(host_3, 129.210.16.90, xxxxx)  //port numbers are expected to be 5 digits
