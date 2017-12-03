@@ -1,0 +1,6 @@
+all:	client.c client.h server.h server.c main.c file_ops.h
+	gcc -o P2 main.c server.c client.c file_ops.c -I.
+debug:	client.c client.h server.h server.c main.c file_ops.h
+	gcc -g -o P2 main.c server.c client.c file_ops.c -I.
+clean:
+	rm -rf *.o *~ P2 core
